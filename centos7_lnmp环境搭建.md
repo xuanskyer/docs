@@ -2,8 +2,14 @@
 
 > centos 安装好之后，初始化的root用户的密码就是你安装时添加的用户的密码（-_-!!!)
 > 避免权限问题，下面所有操作都是以root用户运行。
-
-`su - root`
+>`su - root`
+> 或者添加自己的账号到sudo中
+> `chmod u+w /etc/sudoers`
+> 在文件/etc/sudoers中添加
+>```
+>【你的账户名】ALL=(ALL)       NOPASSWD:ALL
+>```
+> `chmod u-w /etc/sudoers`
 
 ## 加载自定义配置文件(添加到/etc/bashrc下，若不需要可以不添加)
 
